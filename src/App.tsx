@@ -1,12 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import MyComponent from './MyComponent';
+import MeComponent from './MeComponent';
+
+
+
 
 function App() {
+
+  const doSomething = (a: number, b: number) => {
+    console.log(a + b);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <MyComponent title="Hello" doSomething={doSomething} />
+        <MeComponent name="World" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
